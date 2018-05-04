@@ -47,7 +47,7 @@ FROM [dbo].[Transactions]
 ) AS temp
 -- 1NF confirmed
 
--- to normalize into 2NF
+-- to check and normalize into 2NF
 SELECT [customer_id], [first_name], [last_name], [shipping_state], [loyalty_discount]
 INTO Temp
 FROM [dbo].[Transactions]
@@ -68,7 +68,7 @@ Select *
 FROM Customers
 -- 2NF confirmed
 
--- to normalize into 3NF
+-- to check and normalize into 3NF
 SELECT [item], [item_description], [retail_price]
 INTO Temp2
 FROM [dbo].[Transactions]
